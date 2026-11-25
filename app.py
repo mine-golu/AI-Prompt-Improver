@@ -48,7 +48,7 @@ WHAT CHANGED:
 
 
 def improve_with_gemini(user_message):
-    api_key = st.secrets(GEMINI_API_KEY="")
+    api_key = st.secrets.get(GEMINI_API_KEY=","")
 
     if not api_key:
         raise Exception("Gemini API key is missing.")
@@ -72,7 +72,7 @@ def improve_with_gemini(user_message):
 
 
 def improve_with_openrouter(user_message):
-    api_key = st.secrets(OPENROUTER_API_KEY="")
+    api_key = st.secrets.get(OPENROUTER_API_KEY=","")
 
     if not api_key:
         raise Exception("OpenRouter API key is missing.")
